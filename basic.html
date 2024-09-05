@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript basics</title>
+</head>
+
+<body>
+    <h1>Javascript basics</h1>
+    <ul>
+        <li>Spring</li>
+        <li>Summer</li>
+        <li>Fall</li>
+        <li>Winter</li>
+    </ul>
+    <script>
+        let a = new String("Hi");
+        //console.log(a);
+
+        const b = {};
+        console.log(b);
+
+        const c = new Object();
+        console.log(c);
+
+        /*Objects:
+        variables = attributes
+        functions = methods
+        */
+        const jon = {
+            name: "Jon",
+            lastName: "Micha",
+            age: 9,
+            hobbies: ["Running", "Cooking"],
+            single: false,
+            contact: {
+                email: "ivan@gmail.com",
+                twitter:"@ivan",
+                movil:"01293938"
+            },
+            greet: function(){
+                console.log("Hi :)")
+            },
+            sayingMyName: function(){
+                console.log(`Hi, my name is ${this.name} ${this.lastName} and and I'm ${this.age} years old and you can follow me on Twitter ${this.contact.twitter}`)
+            }
+        }
+
+        console.log(jon);
+        console.log(jon["name"]);
+        console.log(jon["lastName"]);
+        console.log(jon.name);
+        console.log(jon.lastName);
+        console.log(jon.age);
+        console.log(jon.single);
+        console.log(jon.hobbies);
+        console.log(jon.hobbies[1]);
+        console.log(jon.contact);
+        console.log(jon.contact.twitter);
+        jon.greet();
+        jon.sayingMyName();
+
+        console.log(Object.keys(jon));
+        console.log(Object.values(jon));
+        console.log(jon.hasOwnProperty("name"));
+        console.log(jon.hasOwnProperty("values"));
+
+        
+    </script>
+</body>
+
+</html>
